@@ -15,7 +15,7 @@
 	</a>
 <h3 align="center">FPGA-HDMI_showchar</h3>
 	<p align="center">
-	123
+	1234
 	<br />
 	<a href="https://github.com/MoonGrt/FPGA-HDMI_showchar"><strong>Explore the docs »</strong></a>
 	<br />
