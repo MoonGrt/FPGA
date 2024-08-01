@@ -15,7 +15,7 @@
 	</a>
 <h3 align="center">FPGA-HDMI_showchar</h3>
 	<p align="center">
-	1234
+	123
 	<br />
 	<a href="https://github.com/MoonGrt/FPGA-HDMI_showchar"><strong>Explore the docs »</strong></a>
 	<br />
@@ -47,6 +47,10 @@
 
 ```
 └─ Project
+  ├─ LICENSE
+  ├─ README.md
+  ├─ /images/
+  │ └─ logo.png
   └─ /show_char/
     └─ /show_char.srcs/
       ├─ ram_init_file.inithex
