@@ -10,21 +10,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-	<a href="https://github.com/MoonGrt/FPGA-HDMI_showchar">
+	<a href="https://github.com/MoonGrt/FPGA-Image_Process">
 	<img src="images/logo.png" alt="Logo" width="80" height="80">
 	</a>
-<h3 align="center">FPGA-HDMI_showchar</h3>
+<h3 align="center">FPGA-Image_Process</h3>
 	<p align="center">
 	123
 	<br />
-	<a href="https://github.com/MoonGrt/FPGA-HDMI_showchar"><strong>Explore the docs »</strong></a>
+	<a href="https://github.com/MoonGrt/FPGA-Image_Process"><strong>Explore the docs »</strong></a>
 	<br />
 	<br />
-	<a href="https://github.com/MoonGrt/FPGA-HDMI_showchar">View Demo</a>
+	<a href="https://github.com/MoonGrt/FPGA-Image_Process">View Demo</a>
 	·
-	<a href="https://github.com/MoonGrt/FPGA-HDMI_showchar/issues">Report Bug</a>
+	<a href="https://github.com/MoonGrt/FPGA-Image_Process/issues">Report Bug</a>
 	·
-	<a href="https://github.com/MoonGrt/FPGA-HDMI_showchar/issues">Request Feature</a>
+	<a href="https://github.com/MoonGrt/FPGA-Image_Process/issues">Request Feature</a>
 	</p>
 </div>
 
@@ -50,24 +50,39 @@
   ├─ LICENSE
   ├─ README.md
   ├─ /images/
-  │ └─ logo.png
-  └─ /show_char/
-    └─ /show_char.srcs/
-      ├─ ram_init_file.inithex
-      ├─ /sim_1/
-      │ └─ /new/
-      │   └─ rb_top.v
+  ├─ /Show_Char/
+  │ └─ /show_char.srcs/
+  │   ├─ ram_init_file.inithex
+  │   ├─ /sim_1/
+  │   │ └─ /new/
+  │   │   └─ rb_top.v
+  │   └─ /sources_1/
+  │     ├─ dvi_transmitter_top.v
+  │     ├─ encode.v
+  │     ├─ hdmi_tx.v
+  │     ├─ ram_char.v
+  │     ├─ ram_init_file.inithex
+  │     ├─ video_display.v
+  │     ├─ video_driver.v
+  │     └─ /new/
+  │       ├─ ram_char1.v
+  │       └─ ram_init_file.inithex
+  └─ /Video_Scaler/
+    └─ /video_scaler.srcs/
       └─ /sources_1/
-        ├─ dvi_transmitter_top.v
-        ├─ encode.v
-        ├─ hdmi_tx.v
-        ├─ ram_char.v
-        ├─ ram_init_file.inithex
-        ├─ video_display.v
-        ├─ video_driver.v
-        └─ /new/
-          ├─ ram_char1.v
-          └─ ram_init_file.inithex
+        ├─ color_bar.v
+        ├─ fifo.v
+        ├─ fifo2.v
+        ├─ fill_brank.v
+        ├─ pixel_cnt.v
+        ├─ tb_top.v
+        └─ /algorithm/
+          ├─ algorithm.v
+          ├─ FIFO.v
+          ├─ image_cut.v
+          ├─ ramDualPort.v
+          ├─ ramFifo.v
+          └─ streamScaler.v
 
 ```
 
@@ -113,14 +128,14 @@ Project Link: [MoonGrt/](https://github.com/MoonGrt/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-HDMI_showchar.svg?style=for-the-badge
-[contributors-url]: https://github.com/MoonGrt/FPGA-HDMI_showchar/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-HDMI_showchar.svg?style=for-the-badge
-[forks-url]: https://github.com/MoonGrt/FPGA-HDMI_showchar/network/members
-[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-HDMI_showchar.svg?style=for-the-badge
-[stars-url]: https://github.com/MoonGrt/FPGA-HDMI_showchar/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-HDMI_showchar.svg?style=for-the-badge
-[issues-url]: https://github.com/MoonGrt/FPGA-HDMI_showchar/issues
-[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-HDMI_showchar.svg?style=for-the-badge
-[license-url]: https://github.com/MoonGrt/FPGA-HDMI_showchar/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
+[contributors-url]: https://github.com/MoonGrt/FPGA-Image_Process/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
+[forks-url]: https://github.com/MoonGrt/FPGA-Image_Process/network/members
+[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
+[stars-url]: https://github.com/MoonGrt/FPGA-Image_Process/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
+[issues-url]: https://github.com/MoonGrt/FPGA-Image_Process/issues
+[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
+[license-url]: https://github.com/MoonGrt/FPGA-Image_Process/blob/master/LICENSE
 
