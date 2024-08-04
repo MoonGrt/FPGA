@@ -16,7 +16,6 @@
 <h3 align="center">FPGA-Image_Process</h3>
 	<p align="center">
 	This repository contains a collection of FPGA-based image processing projects. The projects include character display, arbitrary ratio video scaling, edge detection, filtering (median, mean, Gaussian, etc.), and digital feature recognition. Each project demonstrates various techniques and applications of image processing on FPGA platforms.
-
 	<br />
 	<a href="https://github.com/MoonGrt/FPGA-Image_Process"><strong>Explore the docs »</strong></a>
 	<br />
