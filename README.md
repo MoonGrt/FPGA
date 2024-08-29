@@ -15,7 +15,7 @@
 	</a>
 <h3 align="center">FPGA-MEM</h3>
 	<p align="center">
-	das
+	
 	<br />
 	<a href="https://github.com/MoonGrt/FPGA-MEM"><strong>Explore the docs »</strong></a>
 	<br />
