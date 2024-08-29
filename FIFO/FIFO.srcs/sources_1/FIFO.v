@@ -50,7 +50,12 @@
     defparam UX_XXXXXXXXXXXXX.FIFO_DEPTH = 512
 
     ///////////////////////////
-    DC_FIFO UX_XXXXXXXXXXXXX(
+    
+    FIFO #(
+        .FIFO_MODE ("Normal"),  //"Normal"; //"ShowAhead"
+        .DATA_WIDTH(24),
+        .FIFO_DEPTH(1024))
+    FIFO (
         // System Signal
         .Reset    ( Reset   ),  // System Reset
         // Write Signal
