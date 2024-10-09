@@ -1,4 +1,4 @@
-**English | [简体中文](README_cn.md)**
+**简体中文 | [English](README.md)**
 <div id="top"></div>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -16,7 +16,7 @@
     </a>
 <h3 align="center">FPGA-Basic</h3>
     <p align="center">
-    FPGA-Basic is a repository designed to store fundamental FPGA modules for easy reuse in future projects. The collection includes a variety of drivers, algorithms, memory components, and utility modules, aimed at providing a solid foundation for FPGA development.
+    FPGA-Basic仓库用于存储一些基础的FPGA模块，方便在未来项目中调用。该集合包含多种驱动程序、算法、内存组件和实用模块，旨在为FPGA开发提供一个坚实的基础。
     <br />
     <a href="https://github.com/MoonGrt/FPGA-Basic"><strong>Explore the docs »</strong></a>
     <br />
@@ -33,18 +33,18 @@
 
 <!-- CONTENTS -->
 <details open>
-  <summary>Contents</summary>
+  <summary>目录</summary>
   <ol>
-    <li><a href="#file-tree">File Tree</a></li>
+    <li><a href="#文件树">文件树</a></li>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#关于本项目">关于本项目</a>
       <ul>
       </ul>
     </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#贡献">贡献</a></li>
+    <li><a href="#许可证">许可证</a></li>
+    <li><a href="#联系我们">联系我们</a></li>
+    <li><a href="#致谢">致谢</a></li>
   </ol>
 </details>
 
@@ -52,8 +52,8 @@
 
 
 
-<!-- FILE TREE -->
-## File Tree
+<!-- 文件树 -->
+## 文件树
 
 ```
 └─ Project
@@ -133,85 +133,87 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- 关于本项目 -->
+## 关于本项目
 
 <p>
-FPGA-Basic is a repository designed to store and organize fundamental modules for FPGA development. It provides a modular approach to FPGA design, making it easier to integrate and reuse different hardware components across various projects. This repository is particularly useful for both beginners and experienced engineers who need ready-to-use modules in areas such as signal processing, interface drivers, memory management, and general utility functions. Each module has been optimized for performance and is thoroughly documented for ease of understanding and integration.
+FPGA-Basic仓库旨在存储和组织FPGA开发中常用的基础模块，提供一种模块化的设计方法，方便在不同项目中集成和复用各类硬件组件。该仓库非常适合需要现成模块的初学者和有经验的工程师，涵盖信号处理、接口驱动、内存管理及通用实用功能等领域。每个模块都经过性能优化，并附有详细的文档说明，便于理解和集成。
 </p>
 
-<h4>Structure Overview</h4>
+<h4>结构概览</h4>
 <ul>
   <li>
-    <strong>/Algorithms/</strong>: This section contains essential algorithmic modules often required in FPGA designs. Current modules include:
+    <strong>/Algorithms/</strong>：该部分包含常用的算法模块，这些模块在FPGA设计中经常使用。当前模块包括：
     <ul>
-      <li><strong>FIR</strong>: A Finite Impulse Response (FIR) filter implementation for signal processing tasks.</li>
-      <li><strong>Kalman</strong>: A Kalman filter module for noise reduction and state estimation in real-time systems.</li>
+      <li><strong>FIR</strong>：有限脉冲响应滤波器(FIR)，适用于信号处理任务。</li>
+      <li><strong>Kalman</strong>：卡尔曼滤波器模块，用于实时系统中的噪声抑制和状态估计。</li>
     </ul>
   </li>
   <li>
-    <strong>/Driver/</strong>: This directory includes a range of driver modules that allow interfacing with various hardware components. Modules include:
+    <strong>/Driver/</strong>：该目录下存放了多种硬件接口驱动模块，便于与不同硬件设备的交互。模块包括：
     <ul>
-      <li><strong>EEPROM</strong>: Driver for controlling EEPROM memory.</li>
-      <li><strong>HDMI</strong>: HDMI driver for video output applications.</li>
-      <li><strong>LCD</strong>: Driver for LCD displays.</li>
-      <li><strong>LED</strong>: Simple LED control driver.</li>
-      <li><strong>SR04</strong>: Ultrasonic distance measurement driver using the SR04 sensor.</li>
-      <li><strong>Tube</strong>: Driver for 7-segment display modules (Tube).</li>
-      <li><strong>VGA</strong>: VGA driver for video output, useful in display applications.</li>
+      <li><strong>EEPROM</strong>：用于控制EEPROM存储器的驱动程序。</li>
+      <li><strong>HDMI</strong>：用于视频输出的HDMI驱动程序。</li>
+      <li><strong>LCD</strong>：LCD显示屏驱动程序。</li>
+      <li><strong>LED</strong>：简单的LED控制驱动程序。</li>
+      <li><strong>SR04</strong>：用于超声波距离测量的SR04传感器驱动程序。</li>
+      <li><strong>Tube</strong>：数码管（Tube）驱动程序，用于7段数码管显示模块。</li>
+      <li><strong>VGA</strong>：VGA视频输出驱动程序，适用于显示应用。</li>
     </ul>
   </li>
   <li>
-    <strong>/MEM/</strong>: This section provides a variety of memory-related modules, such as:
+    <strong>/MEM/</strong>：该部分提供多种内存相关模块，包括：
     <ul>
-      <li><strong>axi_ddr_ram</strong>: AXI interface DDR RAM controller.</li>
-      <li><strong>FIFO</strong>: First-In-First-Out memory buffer module for data queuing.</li>
-      <li><strong>RAM</strong>: Simple Random Access Memory (RAM) implementation.</li>
-      <li><strong>ROM</strong>: Read-Only Memory (ROM) module for storing constants.</li>
-      <li><strong>Tool</strong>: Utility tools for memory management and testing.</li>
+      <li><strong>axi_ddr_ram</strong>：AXI接口的DDR RAM控制器。</li>
+      <li><strong>FIFO</strong>：先进先出(FIFO)内存缓冲模块，用于数据排队。</li>
+      <li><strong>RAM</strong>：简单的随机存取存储器(RAM)实现。</li>
+      <li><strong>ROM</strong>：只读存储器(ROM)模块，用于存储常量数据。</li>
+      <li><strong>Tool</strong>：用于内存管理和测试的实用工具模块。</li>
     </ul>
   </li>
   <li>
-    <strong>/Others/</strong>: Contains miscellaneous and utility modules, including:
+    <strong>/Others/</strong>：该部分包含杂项和实用工具模块，包括：
     <ul>
-      <li><strong>Debounce</strong>: A debouncing circuit module to eliminate noise from mechanical switches.</li>
-      <li><strong>Piple_Delay</strong>: Pipeline delay module for timing adjustments and synchronization.</li>
+      <li><strong>Debounce</strong>：去抖动电路模块，消除机械开关的噪声。</li>
+      <li><strong>Piple_Delay</strong>：流水线延迟模块，用于调整时序和同步。</li>
     </ul>
   </li>
 </ul>
 
 <p>
-This repository is constantly evolving, with plans to add more advanced modules in the future, such as DSP modules, more complex drivers, and utility components for system monitoring and performance optimization. Contributions are welcome.
+该仓库将持续更新，计划未来增加更多高级模块，例如DSP模块、更复杂的驱动程序以及用于系统监控和性能优化的实用组件。欢迎贡献代码。
 </p>
 
 <p align="right">(<a href="#top">top</a>)</p>
 
 
-<!-- CONTRIBUTING -->
-## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+<!-- 贡献 -->
+## 贡献
+
+贡献让开源社区成为了一个非常适合学习、互相激励和创新的地方。你所做出的任何贡献都是**受人尊敬**的。
+
+如果你有好的建议，请复刻（fork）本仓库并且创建一个拉取请求（pull request）。你也可以简单地创建一个议题（issue），并且添加标签「enhancement」。不要忘记给项目点一个 star！再次感谢！
+
+1. 复刻（Fork）本项目
+2. 创建你的 Feature 分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的变更 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到该分支 (`git push origin feature/AmazingFeature`)
+5. 创建一个拉取请求（Pull Request）
 <p align="right">(<a href="#top">top</a>)</p>
 
 
 
-<!-- LICENSE -->
-## License
+<!-- 许可证 -->
+## 许可证
 
-Distributed under the MIT License. See `LICENSE` for more information.
+根据 MIT 许可证分发。打开 [LICENSE.txt](LICENSE.txt) 查看更多内容。
 <p align="right">(<a href="#top">top</a>)</p>
 
 
 
-<!-- CONTACT -->
-## Contact
+<!-- 联系我们 -->
+## 联系我们
 
 MoonGrt - 1561145394@qq.com
 Project Link: [MoonGrt/FPGA-Basic](https://github.com/MoonGrt/FPGA-Basic)
@@ -220,8 +222,10 @@ Project Link: [MoonGrt/FPGA-Basic](https://github.com/MoonGrt/FPGA-Basic)
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!-- 致谢 -->
+## 致谢
+
+在这里列出你觉得有用的资源，并以此致谢。我已经添加了一些我喜欢的资源，以便你可以快速开始！
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
