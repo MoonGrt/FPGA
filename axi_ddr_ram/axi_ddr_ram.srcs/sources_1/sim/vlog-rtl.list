@@ -1,6 +1,0 @@
-
-../rtl/*.v
-
-../sim/tb/*.v 
-../sim/tb/axi_ram_v1.0/*.v 
-
