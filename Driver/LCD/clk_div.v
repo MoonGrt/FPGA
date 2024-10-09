@@ -13,13 +13,13 @@ module clk_div (
     reg       div_4_cnt;
     reg [1:0] div_8_cnt;
 
-    // 时钟2分频 输出50MHz时钟 
+    // 时钟2分频 输出50MHz时钟
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) clk_50m <= 1'b0;
         else clk_50m <= ~clk_50m;
     end
 
-    // 时钟4分频 输出25MHz时钟 
+    // 时钟4分频 输出25MHz时钟
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             div_4_cnt <= 1'b0;
@@ -30,7 +30,7 @@ module clk_div (
         end
     end
 
-    // 时钟8分频 输出12.5MHz时钟 
+    // 时钟8分频 输出12.5MHz时钟
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             div_8_cnt <= 2'b0;

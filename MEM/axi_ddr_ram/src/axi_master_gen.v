@@ -48,7 +48,7 @@ module axi_master_gen #(
     input                      m_axi_rvalid,
     output wire                m_axi_rready
 );
-    // Parameter Define 
+    // Parameter Define
     parameter State_idle = 3'd0;
     parameter State_waddr = 3'd1;
     parameter State_wdata = 3'd2;
@@ -160,7 +160,7 @@ module axi_master_gen #(
 
     always @(posedge clk or negedge rstn) begin
         if (rstn == 1'b0) m_axi_wvalid <= 1'b0;
-        else if ((m_axi_awvalid == 1'b1) && (m_axi_awready == 1'b1)) m_axi_wvalid <= 1'b1;  // burst 
+        else if ((m_axi_awvalid == 1'b1) && (m_axi_awready == 1'b1)) m_axi_wvalid <= 1'b1;  // burst
         else if ((m_axi_wlast == 1'b1) && (m_axi_wready == 1'b1)) m_axi_wvalid <= 1'b0;
     end
 

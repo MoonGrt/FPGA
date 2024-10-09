@@ -12,16 +12,16 @@ module decoder (
     output [7:0] pdatain
 );
 
-    // parameter define 	
+    // parameter define
     parameter CTRLTOKEN0 = 10'b1101010100;  // 10'h354
     parameter CTRLTOKEN1 = 10'b0010101011;  // 10'hab
     parameter CTRLTOKEN2 = 10'b0101010100;  // 10'h154
     parameter CTRLTOKEN3 = 10'b1010101011;  // 10'h2ab
 
-    // wire define 
+    // wire define
     wire [7:0] pdatain8b;
 
-    // reg define 
+    // reg define
     reg  [7:0] pdatain = 0;
     reg        pc0 = 0;
     reg        pc1 = 0;
@@ -29,7 +29,7 @@ module decoder (
 
     //*****************************************************
     //**                    main code
-    //***************************************************** 
+    //*****************************************************
 
     assign pdatain8b = (pdatainbnd[9]) ? ~pdatainbnd[7:0] : pdatainbnd[7:0];
 

@@ -35,7 +35,7 @@ module i2c_edid (
 
     //*****************************************************
     //**                    main code
-    //***************************************************** 
+    //*****************************************************
 
     // 取IIC时钟的上升沿
     assign scl_posedge = (scl_data == 4'b0111) ? 1'b1 : 1'b0;
@@ -86,7 +86,7 @@ module i2c_edid (
                             rdata <= {rdata[14:0], sda};
                             if (count[2:0] == 3'd7) begin  // 器件地址写完
                                 edid_state <= EDID_ADDR_ACK;
-                                if (count == 5'd15)  // 字地址写完    
+                                if (count == 5'd15)  // 字地址写完
                                     addr <= {rdata[6:0], sda};  // 将字地址赋给ROM地址
                                 else addr <= addr;
                             end

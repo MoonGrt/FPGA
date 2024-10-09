@@ -18,7 +18,7 @@ module eeprom_top (
 
     // 转换差分信号
     IBUFDS diff_clock (
-        .I (sys_clk_p),  // 系统差分输入时钟    
+        .I (sys_clk_p),  // 系统差分输入时钟
         .IB(sys_clk_n),  // 系统差分输入时钟
         .O (sys_clk)     // 输出系统时钟
     );
@@ -32,7 +32,7 @@ module eeprom_top (
     wire        i2c_rh_wl;  // I2C读写控制
     wire [ 7:0] i2c_data_r;  // I2C读出的数据
     wire        rw_done;  // E2PROM读写测试完成
-    wire        rw_result;  // E2PROM读写测试结果 0:失败 1:成功 
+    wire        rw_result;  // E2PROM读写测试结果 0:失败 1:成功
 
     //*****************************************************
     //**                    main code
@@ -49,7 +49,7 @@ module eeprom_top (
         .i2c_data_w(i2c_data_w),  // I2C要写的数据
         .i2c_data_r(i2c_data_r),  // I2C读出的数据
         .i2c_done  (i2c_done),    // I2C一次操作完成
-        .i2c_ack   (i2c_ack),     // I2C应答标志 
+        .i2c_ack   (i2c_ack),     // I2C应答标志
         // user interface
         .rw_done   (rw_done),     // E2PROM读写测试完成
         .rw_result (rw_result)    // E2PROM读写测试结果 0:失败 1:成功

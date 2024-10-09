@@ -19,14 +19,14 @@ module syncbase #(
 
     //*****************************************************
     //**                    main code
-    //***************************************************** 
+    //*****************************************************
 
     always @(posedge inclk) begin
         if (areset) iin_q <= kResetTo;
         else iin_q <= iin;
     end
 
-    // Crossing clock boundary here      
+    // Crossing clock boundary here
     syncasync u_syncasync (
         .areset(areset),
         .ain   (iin_q),

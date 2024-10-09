@@ -16,7 +16,7 @@
         .key_o ( key_o )
     );
 */
-
+aaaaaaaaaaaaaaaaaaaaaa
 module debounce #(
     parameter CNT_NMB = 100_0000  // delay 100_0000 * 20ns(1s/50MHz) = 20ms (50MHz)
 ) (

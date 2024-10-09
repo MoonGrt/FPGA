@@ -1,4 +1,4 @@
-`timescale 1ns/100ps
+S`timescale 1ns/100ps
 
 /*例化模板和参数说明
     // System Signal
@@ -21,7 +21,7 @@
     //满信号；有效时，WrEn无效
     wire WrFull;  // (O)Write Full
 
-    // Read Signal    
+    // Read Signal
     // 读时钟输入；上升沿有效
     wire RdClk;  // (I)Read Clock
     // 读允许信号；高电平有效
@@ -34,7 +34,7 @@
     // Almostfull 、 AlmostEmpty、 Rdfull 信号
     wire [AW_C-1:0] RdDNum;  // (O)Radd Data Number In Fifo
     // 指示当前的数据有效
-    wire DataVal;  // (O)Data Valid 
+    wire DataVal;  // (O)Data Valid
     // 空信号；有效时 RdEn 无效
     wire RdEmpty;  // (O)Read FifoEmpty
 
@@ -50,7 +50,7 @@
     defparam UX_XXXXXXXXXXXXX.FIFO_DEPTH = 512
 
     ///////////////////////////
-    
+
     FIFO #(
         .FIFO_MODE ("Normal"),  //"Normal"; //"ShowAhead"
         .DATA_WIDTH(24),
@@ -82,7 +82,7 @@ module FIFO #(
     parameter AW_C       = $clog2(FIFO_DEPTH),
     parameter DW_C       = DATA_WIDTH        ,
     parameter DD_C       = 2**AW_C
-)(   
+)(
     // System Signal
     input                 Reset   ,  // System Reset
     // Write Signal
@@ -105,7 +105,7 @@ localparam TCo_C = 1;
 
 //********************************************************/
 // 将输入的异步复位信号，同步到内部时钟源；
-// 保证两个时钟域都接收到了复位信号，才释放同步复位信号	
+// 保证两个时钟域都接收到了复位信号，才释放同步复位信号
 //********************************************************/
 reg  [1:0] WrClkRstGen = 2'h3;
 reg  [1:0] RdClkRstGen = 2'h3;
@@ -120,7 +120,7 @@ always @(posedge RdClk or posedge Reset) begin
     if(Reset)              RdClkRstGen <= # TCo_C 2'h3;
     else if(&RdClkRstGen)  RdClkRstGen <= # TCo_C 2'h2;
     else if(~&WrClkRstGen) RdClkRstGen <= # TCo_C RdClkRstGen - {1'h0,(|RdClkRstGen)};
-end  
+end
 
 /////////////////////////////////////////////////////////
 reg  WrClkRst = 1'h1;
@@ -129,7 +129,7 @@ reg  RdClkRst = 1'h1;
 always @(posedge WrClk or posedge Reset) begin
     if(Reset) WrClkRst <= # TCo_C 1'h1;
     else WrClkRst <= # TCo_C |WrClkRstGen;
-end 
+end
 always @(posedge RdClk or posedge Reset) begin
     if(Reset) RdClkRst <= # TCo_C 1'h1;
     else RdClkRst <= # TCo_C |RdClkRstGen;
@@ -151,14 +151,14 @@ U1_WrAddrCnt(
     // System Signal
     .Reset          ( WrClkRst   ),  // System Reset
     .SysClk         ( WrClk      ),  // System Clock
-    // Counter Signal            
+    // Counter Signal
     .ClkEn          ( FifoWrEn   ),  // (I)Clock Enable
     .FifoFlag       ( FifoWrFull ),  // (I)Fifo Flag
     .AddrCnt        ( WrNextAddr ),  // (O)Next Address
     .Addess         ( FifoWrAddr )   // (O)Address Output
 );
 
-///////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////
 reg [DW_C-1:0] FifoBuff [DD_C-1:0];
 
 always @(posedge WrClk) begin
@@ -177,7 +177,7 @@ wire           FifoRdEn;
 wire [AW_C :0] RdNextAddr;
 wire [AW_C :0] FifoRdAddr;
 
-FifoAddrCnt #( 
+FifoAddrCnt #(
     .CounterWidth_C (AW_C))
 U2_RdAddrCnt(
     // System Signal
@@ -252,9 +252,9 @@ always @(posedge WrClk) begin
     if(WrClkRst) WrFullClr <= # TCo_C 1'h0;
     else WrFullClr <= # TCo_C (WrRdAddr[AW_C-1:0] != WrRdAddrReg[AW_C-1:0]);
 end
-  
+
 /////////////////////////////////////////////////////////
-// 计算满信号 
+// 计算满信号
 reg  RdAHighNext = 1'h0;
 wire RdAHighRise = (~WrRdAddrReg[AW_C-1]) & WrRdAddr[AW_C-1];
 
@@ -263,7 +263,7 @@ always @(posedge WrClk) begin
     else if(RdAHighRise)RdAHighNext <= # TCo_C (~WrRdAddr[AW_C]);
 end
 
-wire FullCalc = (WrNextAddr[AW_C-1:0] == WrRdAddr[AW_C-1:0]) 
+wire FullCalc = (WrNextAddr[AW_C-1:0] == WrRdAddr[AW_C-1:0])
                 && (WrNextAddr[AW_C] != (WrRdAddr[AW_C-1] ? WrRdAddrReg[AW_C] : RdAHighNext));
 
 ///////////////////////////////////////////////////
@@ -278,7 +278,7 @@ end
 assign FifoWrFull = FullFlag;
 
 ///////////////////////////////////////////////////
-assign WrFull = FifoWrFull;  // (I)Write Full 
+assign WrFull = FifoWrFull;  // (I)Write Full
 ///////////////////////////////////////////////////
 
 
@@ -286,7 +286,7 @@ assign WrFull = FifoWrFull;  // (I)Write Full
 // 在读时钟域计算读写地址差
 //********************************************************/
 // 把写地址 （ FifoWrAddr ）搬到读时钟域
-reg  [AW_C :0] RdWrAddr = {AW_C+1{1'h0}}; 
+reg  [AW_C :0] RdWrAddr = {AW_C+1{1'h0}};
 
 always @(posedge RdClk) begin
     if(RdClkRst) RdWrAddr <= # TCo_C {AW_C+1{1'h0}};
@@ -315,7 +315,7 @@ GrayDecode # (AW_C) RWAGray2Hex (RdWrAddr   [AW_C-1:0], RdWrAHex[AW_C-1:0]);
 GrayDecode # (AW_C) RRAGray2Hex (RdAddrOut  [AW_C-1:0], RdRdAHex[AW_C-1:0]);
 
 /////////////////////////////////////////////////////////
-// 在读时钟域计算地址差  
+// 在读时钟域计算地址差
 reg  [AW_C:0] RdAddrDiff = {AW_C+1{1'h0}};
 
 wire [AW_C:0] Calc_RdAddrDiff = ({RdAddrOut[AW_C], RdRdAHex} + {{AW_C{1'h0}}, ReadEn});
@@ -332,8 +332,8 @@ assign RdDNum = RdAddrDiff;  // (O)Data Number In Fifo
 //********************************************************/
 // 计算 RdEmpty 信号
 //********************************************************/
-// 产生 RdEmpty 的清除信号  
-reg  [AW_C:0] RdWrAddrReg = {AW_C+1{1'h0}}; 
+// 产生 RdEmpty 的清除信号
+reg  [AW_C:0] RdWrAddrReg = {AW_C+1{1'h0}};
 reg           EmptyClr    = 1'h0;
 
 always @(posedge RdClk) begin
@@ -380,9 +380,9 @@ always @(posedge RdClk ) begin
     else if(FifoRdEn) EmptyReg <= # TCo_C FifoEmpty;
 end
 
-///////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////
 assign RdEmpty = (FIFO_MODE == "ShowAhead") ? EmptyReg : FifoEmpty;  // (O)Read FifoEmpty
-///////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////
 
 //********************************************************/
 //
@@ -395,7 +395,7 @@ always @(posedge RdClk) begin
         else if(RdFirst) RdFirst <= # TCo_C 1'h0;
         else if(EmptyClr) RdFirst <= # TCo_C RdEmpty;
         else if(EmptyReg ^ EmptyFlag) RdFirst <= # TCo_C RdEmpty;
-    end else 
+    end else
         RdFirst <= # TCo_C 1'h0;
 end
 
@@ -406,7 +406,7 @@ always @(posedge RdClk) ReadEn_Reg <= ReadEn;
 
 wire Data_Valid = (FIFO_MODE == "ShowAhead") ? ReadEn : ReadEn_Reg;
 
-///////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////
 assign FifoRdEn = ReadEn || RdFirst;
 assign DataVal = Data_Valid;  // (O)Data Valid
 /////////////////////////////////////////////////////////
@@ -422,12 +422,12 @@ endmodule
 module FifoAddrCnt #(
     parameter CounterWidth_C = 9,
     parameter CW_C = CounterWidth_C
-)(   
+)(
     // System Signal
     input             Reset   ,  // System Reset
     input             SysClk  ,  // System Clock
-    // Counter Signal            
-    input             ClkEn   ,  // (I)Clock Enable 
+    // Counter Signal
+    input             ClkEn   ,  // (I)Clock Enable
     input             FifoFlag,  // (I)Fifo Flag
     output  [CW_C:0]  AddrCnt ,  // (O)Address Counter
     output  [CW_C:0]  Addess     // (O)Address Output
@@ -435,7 +435,7 @@ module FifoAddrCnt #(
 
 // Define Parameter
 /////////////////////////////////////////////////////////
-localparam TCo_C = 1;    
+localparam TCo_C = 1;
 /////////////////////////////////////////////////////////
 wire [CW_C-1:0] GrayAddrCnt;
 wire            CarryOut;
@@ -446,14 +446,14 @@ U1_AddrCnt(
     //System Signal
     .Reset    ( Reset       ),  // System Reset
     .SysClk   ( SysClk      ),  // System Clock
-    //Counter Signal             
+    //Counter Signal
     .SyncClr  ( 1'h0        ),  // (I)Sync Clear
-    .ClkEn    ( ClkEn       ),  // (I)Clock Enable 
+    .ClkEn    ( ClkEn       ),  // (I)Clock Enable
     .CarryIn  ( ~FifoFlag   ),  // (I)Carry input
     .CarryOut ( CarryOut    ),  // (O)Carry output
     .Count    ( GrayAddrCnt )   // (O)Counter Value Output
 );
-        
+
 /////////////////////////////////////////////////////////
 reg  CntHighBit;
 
@@ -468,11 +468,11 @@ reg  [CW_C:0] AddrOut;  // (O)Address Output
 always @(posedge SysClk) begin
     if(Reset)      AddrOut <= # TCo_C {CW_C{1'h0}};
     else if(ClkEn) AddrOut <= # TCo_C FifoFlag ? AddrOut : AddrCnt;
-end    
+end
 
 /////////////////////////////////////////////////////////
-assign AddrCnt = {CntHighBit, GrayAddrCnt};  // (O)Next Address           
-assign Addess = AddrOut;  // (O)Address Output    
+assign AddrCnt = {CntHighBit, GrayAddrCnt};  // (O)Next Address
+assign Addess = AddrOut;  // (O)Address Output
 /////////////////////////////////////////////////////////
 
 endmodule
@@ -486,13 +486,13 @@ endmodule
 module GrayCnt #(
     parameter CounterWidth_C = 9,
     parameter CW_C = CounterWidth_C
-)( 
+)(
     //System Signal
     input             Reset   ,  // System Reset
     input             SysClk  ,  // System Clock
     //Counter Signal
     input             SyncClr ,  // (I)Sync Clear
-    input             ClkEn   ,  // (I)Clock Enable 
+    input             ClkEn   ,  // (I)Clock Enable
     input             CarryIn ,  // (I)Carry input
     output            CarryOut,  // (O)Carry output
     output [CW_C-1:0] Count      // (O)Counter Value Output
@@ -559,7 +559,7 @@ module GrayDecode #(
 localparam TCo_C = 1;
 localparam DW_C = DataWidht_C;
 /////////////////////////////////////////////////////////
-reg [DW_C-1:0] Hex; 
+reg [DW_C-1:0] Hex;
 integer i;
 
 always @ (GrayIn) begin
@@ -569,4 +569,4 @@ end
 
 assign HexOut = Hex;
 
-endmodule 
+endmodule

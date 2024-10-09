@@ -3,11 +3,11 @@
 module vga_disp (
     input        clk,
     input [10:0] pixel_xpos,  // 像素点横坐标
-    input [10:0] pixel_ypos,  // 像素点纵坐标    
+    input [10:0] pixel_ypos,  // 像素点纵坐标
     input        in_flag,     // 接收一帧数据完成标志
     input [ 7:0] in_data,     // 接收的数据
 
-    output reg [2:0] pixel_data = 0  // 像素点数据,   
+    output reg [2:0] pixel_data = 0  // 像素点数据,
 );
 
     localparam WHITE = 3'b111;  // 背景颜色 白色

@@ -20,7 +20,7 @@ module phasealign #(
     output [4:0] peyesize
 );
 
-    // parameter define  
+    // parameter define
     parameter kBitslipDelay = 3;  // BITSLIP_DELAY
     parameter kTimeoutEnd = kTimeoutMs * 1000 * kRefClkFrqMHz;
     parameter CTRLTOKEN0 = 10'h354;
@@ -32,19 +32,19 @@ module phasealign #(
     parameter kDelayWaitEnd = 3;
     parameter kEyeOpenCntMin = 3;
     parameter kEyeOpenCntEnough = 16;
-    parameter ResetSt = 11'b00000000001;  // 全局复位状态              
-    parameter IdleSt = 11'b00000000010;  // IDLE状态 
-    parameter TokenSt = 11'b00000000100;  // 判断检测字符状态 
+    parameter ResetSt = 11'b00000000001;  // 全局复位状态
+    parameter IdleSt = 11'b00000000010;  // IDLE状态
+    parameter TokenSt = 11'b00000000100;  // 判断检测字符状态
     parameter EyeOpenSt = 11'b00000001000;  // 寻找延时区间状态
     parameter JtrZoneSt = 11'b00000010000;  // 判断延时区间状态
-    parameter DlyIncSt = 11'b00000100000;  // 重新查找延迟区间状态 
-    parameter DlyTstOvfSt = 11'b00001000000;  // 延迟测试 
-    parameter DlyDecSt = 11'b00010000000;  // 寻找延迟中间值 
-    parameter DlyTstCenterSt = 11'b00100000000;  // 判断延迟中间值 
+    parameter DlyIncSt = 11'b00000100000;  // 重新查找延迟区间状态
+    parameter DlyTstOvfSt = 11'b00001000000;  // 延迟测试
+    parameter DlyDecSt = 11'b00010000000;  // 寻找延迟中间值
+    parameter DlyTstCenterSt = 11'b00100000000;  // 判断延迟中间值
     parameter AlignedSt = 11'b01000000000;  // 找到延迟中间值
-    parameter AlignErrorSt = 11'b10000000000;  // 中间值错误状态 
+    parameter AlignErrorSt = 11'b10000000000;  // 中间值错误状态
 
-    // reg define 
+    // reg define
     reg         palign_rst = 0;  // 对齐复位信号
     reg  [ 1:0] pbitslip_cnt = 0;  // bitslip计数器
     reg         palign_err_q = 0;  // 对齐错误寄存器
@@ -79,7 +79,7 @@ module phasealign #(
     reg         pctltkn_ovf = 0;
     reg         pdelayfast_ovf = 0;
 
-    // wire define 
+    // wire define
     wire        ptimeout_rst;
     wire        pctltkn_rst;
     wire        pdelaywait_rst;
@@ -96,14 +96,14 @@ module phasealign #(
 
     //*****************************************************
     //**                    main code
-    //*****************************************************   
+    //*****************************************************
     // FSM Outputs
     assign ptimeout_rst = (pstate == IdleSt || pstate == TokenSt) ? 1'b0 : 1'b1;
     assign pctltkn_rst = (pstate == TokenSt) ? 1'b0 : 1'b1;
     assign pdelaywait_rst = (pstate == DlyTstOvfSt || pstate == DlyTstCenterSt) ? 1'b0 : 1'b1;
     assign  peyeopen_rst = (pstate == ResetSt || ( (pstate == JtrZoneSt) && (pfoundeye_flag == 0) ) ) ? 1'b1 : 1'b0;
     assign peyeopen_en = (pstate == EyeOpenSt) ? 1'b1 : 1'b0;
-    // Control Token Detection                                                                                                             
+    // Control Token Detection
     assign ptkn0_flag = (pdataq == CTRLTOKEN0) ? 1'b1 : 1'b0;
     assign ptkn1_flag = (pdataq == CTRLTOKEN1) ? 1'b1 : 1'b0;
     assign ptkn2_flag = (pdataq == CTRLTOKEN2) ? 1'b1 : 1'b0;
@@ -114,7 +114,7 @@ module phasealign #(
     // Bitslip when phase alignment exhausted the whole tap range and still no lock
     always @(posedge pixelclk) begin
         palign_err_q <= perror;
-        pbitslip <= ~palign_err_q && perror; // single pulse bitslip on failed alignment attempt    
+        pbitslip <= ~palign_err_q && perror; // single pulse bitslip on failed alignment attempt
     end
 
     // 输出时间计数器
@@ -149,7 +149,7 @@ module phasealign #(
         end
     end
 
-    // Register pipeline                                                                                                                  
+    // Register pipeline
     always @(posedge pixelclk) begin
         pdataq <= pdata;
         ptkn0_flagq <= ptkn0_flag;
@@ -161,7 +161,7 @@ module phasealign #(
         pblank_begin <= ~ptkn_flagq && ptkn_flag;
     end
 
-    // Open Eye Width Counter                                                                                                                
+    // Open Eye Width Counter
     always @(posedge pixelclk) begin
         if (peyeopen_rst) begin
             peyeopen_cnt <= 0;
@@ -172,7 +172,7 @@ module phasealign #(
         end
     end
 
-    // Tap Delay Overflow                                                                                                                
+    // Tap Delay Overflow
     always @(posedge pixelclk) begin
         pidly_cnt_q <= pidly_cnt;
 
@@ -183,7 +183,7 @@ module phasealign #(
         else pdelayfast_ovf <= 1'b0;
     end
 
-    // Tap Delay Center                                                                                                                                                   
+    // Tap Delay Center
     always @(posedge pixelclk) begin
         if (pidly_cnt_q == pcenter_tap / 2) pdelay_center <= 1'b1;
         else pdelay_center <= 1'b0;
@@ -199,7 +199,7 @@ module phasealign #(
         end
     end
 
-    // FSM                                                                         
+    // FSM
     always @(posedge pixelclk) begin
         if (palign_rst) pstate <= ResetSt;
         else pstate <= pStateNxt;

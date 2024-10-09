@@ -15,7 +15,7 @@ module lcd_rgb_colorbar (
     inout  [23:0] lcd_rgb   // LCD RGB888颜色数据
 );
 
-    // wire define    
+    // wire define
     wire [15:0] lcd_id;  // LCD屏ID
     wire        lcd_pclk;  // LCD像素时钟
     wire        lcd_clk_180;  // LCD像素时钟
@@ -53,7 +53,7 @@ module lcd_rgb_colorbar (
         .lcd_id (lcd_id)
     );
 
-    // 时钟分频模块    
+    // 时钟分频模块
     clk_div u_clk_div (
         .clk     (sys_clk),
         .rst_n   (sys_rst_n),
@@ -61,7 +61,7 @@ module lcd_rgb_colorbar (
         .lcd_pclk(lcd_pclk)
     );
 
-    // LCD显示模块    
+    // LCD显示模块
     lcd_display u_lcd_display (
         .lcd_pclk  (lcd_pclk),
         .rst_n     (sys_rst_n),

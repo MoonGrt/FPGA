@@ -7,13 +7,13 @@ module hdmi_loop (
     input        hdmi_ddc_scl_io,  // IIC时钟
     inout        hdmi_ddc_sda_io,  // IIC数据
     output       hdmi_in_hpd,      // 热插拔信号
-    output [0:0] hdmi_in_oen,      // 输入输出切换信号 
+    output [0:0] hdmi_in_oen,      // 输入输出切换信号
     input        clk_hdmi_in_n,    // 输入差分时钟
     input        clk_hdmi_in_p,    // 输入差分时钟
     input  [2:0] data_hdmi_in_n,   // 输入差分数据
     input  [2:0] data_hdmi_in_p,   // 输入差分数据
     // hdmi out
-    output [0:0] hdmi_out_oen,     // 输入输出切换信号 
+    output [0:0] hdmi_out_oen,     // 输入输出切换信号
     output       clk_hdmi_out_n,   // 输出差分时钟
     output       clk_hdmi_out_p,   // 输出差分时钟
     output [2:0] data_hdmi_out_n,  // 输出差分数据
@@ -29,14 +29,14 @@ module hdmi_loop (
     wire        video_hs;  // 行信号
     wire        video_vs;  // 场信号
     wire        video_de;  // 数据有效使能
-    wire        hdmi_in_oen;  // 输入输出切换信号 
+    wire        hdmi_in_oen;  // 输入输出切换信号
     wire        hdmi_in_hpd;  // 热插拔信号
-    wire        hdmi_out_oen;  // 输入输出切换信号 
+    wire        hdmi_out_oen;  // 输入输出切换信号
     wire [23:0] video_rgb;  // 像素数据
 
     // *****************************************************
     // **                    main code
-    // *****************************************************      
+    // *****************************************************
     // 时钟模块
     mmcm u_mmcm (
         .clk_out1(clk_10m),   //  output clk_out1
@@ -45,7 +45,7 @@ module hdmi_loop (
         .clk_in1 (sys_clk)    //  input clk_in1
     );
 
-    // 读edid模块    
+    // 读edid模块
     i2c_edid u_i2c_edid (
         .clk(clk_10m),
         .rst(~rst_n),
@@ -53,7 +53,7 @@ module hdmi_loop (
         .sda(hdmi_ddc_sda_io)
     );
 
-    // hdmi解码模块    
+    // hdmi解码模块
     hdmi_rx u_hdmi_rx (
         .clk_10m    (clk_10m),
         .clk_200m   (clk_200m),
@@ -67,7 +67,7 @@ module hdmi_loop (
         .green_n    (data_hdmi_in_n[1]),
         .red_n      (data_hdmi_in_n[2]),
         .rst_n      (rst_n),
-        // output       
+        // output
         .reset      (rx_rst),
         .pclk       (pixel_clk),
         .pclkx5     (pixel_clk_5x),
@@ -79,7 +79,7 @@ module hdmi_loop (
         .hdmi_in_hpd(hdmi_in_hpd)
     );
 
-    //  HDMI解码封装层模块      
+    //  HDMI解码封装层模块
     dvi_transmitter_top u_rgb2dvi_0 (
         .pclk   (pixel_clk),
         .pclk_x5(pixel_clk_5x),

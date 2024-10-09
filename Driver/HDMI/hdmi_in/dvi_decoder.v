@@ -14,28 +14,28 @@ module dvi_decoder (
 
     output reg        reset,   // rx reset
     output wire       pclk,    // regenerated pixel clock
-    output wire       pclkx5,  // 5x pixel as IOCLK  
+    output wire       pclkx5,  // 5x pixel as IOCLK
     output wire       hsync,   // hsync data
     output wire       vsync,   // vsync data
-    output wire       de,      // data enable  
+    output wire       de,      // data enable
     output wire [7:0] red,     // pixel data out
     output wire [7:0] green,   // pixel data out
-    output wire [7:0] blue     // pixel data out  
+    output wire [7:0] blue     // pixel data out
 
 );
 
-    // parameter define    
+    // parameter define
     parameter kCtlTknCount = 128;  // 检测到控制字符的最低持续个数
     parameter kTimeoutMs = 50;  // 未检测到控制字符的最大时间间隔
 
-    // wire define       
+    // wire define
     wire de_b, de_g, de_r;
     wire blue_rdy, green_rdy, red_rdy;  // 数据准备好信号
     wire blue_vld, green_vld, red_vld;  // 数据有效信号
 
     //*****************************************************
     //**                    main code
-    //*****************************************************  
+    //*****************************************************
 
     assign de = de_b;
 
@@ -56,7 +56,7 @@ module dvi_decoder (
         .alocked  (pll_lckd)
     );
 
-    // HDMI红色数据解码模块 
+    // HDMI红色数据解码模块
     tmds_decoder #(
         .kCtlTknCount (kCtlTknCount),  // 检测到控制字符的最低持续个数
         .kTimeoutMs   (kTimeoutMs),    // 未检测到控制字符的最大时间间隔
@@ -82,7 +82,7 @@ module dvi_decoder (
         .peyesize   ()
     );
 
-    // HDMI蓝色数据解码模块 
+    // HDMI蓝色数据解码模块
     tmds_decoder #(
         .kCtlTknCount (kCtlTknCount),  // 检测到控制字符的最低持续个数
         .kTimeoutMs   (kTimeoutMs),    // 未检测到控制字符的最大时间间隔
@@ -108,7 +108,7 @@ module dvi_decoder (
         .peyesize   ()
     );
 
-    // HDMI绿色数据解码模块 
+    // HDMI绿色数据解码模块
     tmds_decoder #(
         .kCtlTknCount (kCtlTknCount),  // 检测到控制字符的最低持续个数
         .kTimeoutMs   (kTimeoutMs),    // 未检测到控制字符的最大时间间隔

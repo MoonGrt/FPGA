@@ -9,7 +9,7 @@ module tmds_clock (
     output alocked
 );
 
-    // wire define  
+    // wire define
     wire clk_in_hdmi_clk;
     wire pixelclk;
     wire serialclk;
@@ -19,7 +19,7 @@ module tmds_clock (
 
     //*****************************************************
     //**                    main code
-    //***************************************************** 
+    //*****************************************************
 
     IBUFDS #(
         .DIFF_TERM   ("FALSE"),
@@ -52,7 +52,7 @@ module tmds_clock (
         .CLKIN1_PERIOD       (6.667)
     )  // 输入时钟的周期，单位ns
         mmcm_adv_inst
-    // Output clocks                                                    
+    // Output clocks
     (
         .CLKFBOUT    (clkfbout_hdmi_clk),
         .CLKFBOUTB   (),
@@ -67,13 +67,13 @@ module tmds_clock (
         .CLKOUT4     (),
         .CLKOUT5     (),
         .CLKOUT6     (),
-        // Input clock control                                             
+        // Input clock control
         .CLKFBIN     (clkfbout_hdmi_clk),
         .CLKIN1      (clk_in_hdmi_clk),
         .CLKIN2      (1'b0),
-        // Tied to always select the primary input clock                   
+        // Tied to always select the primary input clock
         .CLKINSEL    (1'b1),
-        // Ports for dynamic reconfiguration                                
+        // Ports for dynamic reconfiguration
         .DADDR       (7'h0),
         .DCLK        (1'b0),
         .DEN         (1'b0),
@@ -81,12 +81,12 @@ module tmds_clock (
         .DO          (),
         .DRDY        (),
         .DWE         (1'b0),
-        // Ports for dynamic phase shift                                    
+        // Ports for dynamic phase shift
         .PSCLK       (1'b0),
         .PSEN        (1'b0),
         .PSINCDEC    (1'b0),
         .PSDONE      (),
-        // Other control and status signals                                 
+        // Other control and status signals
         .LOCKED      (alocked),
         .CLKINSTOPPED(),
         .CLKFBSTOPPED(),

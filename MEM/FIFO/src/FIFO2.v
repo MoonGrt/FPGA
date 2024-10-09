@@ -69,7 +69,7 @@ module fifo2 #(
 
     //========================================================= write_fifo
     // genvar i;
-    // generate 
+    // generate
     // for(i = 0; i < data_depth; i = i + 1 )
     // begin:fifo_init
     // always @(posedge wr_clk or posedge rst) begin

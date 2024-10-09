@@ -6,7 +6,7 @@ module i2c_dri #(
     input clk,
     input rst_n,
 
-    // i2c interface                      
+    // i2c interface
     input             i2c_exec,    // I2C触发执行信号
     input             bit_ctrl,    // 字地址位控制(16b/8b)
     input             i2c_rh_wl,   // I2C读写控制信号
@@ -18,7 +18,7 @@ module i2c_dri #(
     output reg        scl,         // I2C的SCL时钟信号
     inout             sda,         // I2C的SDA信号
 
-    // user interface                   
+    // user interface
     output reg dri_clk  // 驱动I2C操作的驱动时钟
 );
 
@@ -196,10 +196,10 @@ module i2c_dri #(
                             sda_out <= 1'b1;
                         end
                         7'd37:   scl <= 1'b1;
-                        7'd38: begin  // 从机应答 
+                        7'd38: begin  // 从机应答
                             st_done <= 1'b1;
                             if (sda_in == 1'b1)  // 高电平表示未应答
-                                i2c_ack <= 1'b1;  // 拉高应答标志位     
+                                i2c_ack <= 1'b1;  // 拉高应答标志位
                         end
                         7'd39: begin
                             scl <= 1'b0;
@@ -245,7 +245,7 @@ module i2c_dri #(
                         7'd34: begin  // 从机应答
                             st_done <= 1'b1;
                             if (sda_in == 1'b1)  // 高电平表示未应答
-                                i2c_ack <= 1'b1;  // 拉高应答标志位    
+                                i2c_ack <= 1'b1;  // 拉高应答标志位
                         end
                         7'd35: begin
                             scl <= 1'b0;
@@ -291,7 +291,7 @@ module i2c_dri #(
                         7'd34: begin  // 从机应答
                             st_done <= 1'b1;
                             if (sda_in == 1'b1)  // 高电平表示未应答
-                                i2c_ack <= 1'b1;  // 拉高应答标志位    
+                                i2c_ack <= 1'b1;  // 拉高应答标志位
                         end
                         7'd35: begin
                             scl <= 1'b0;
@@ -337,7 +337,7 @@ module i2c_dri #(
                         7'd34: begin  // 从机应答
                             st_done <= 1'b1;
                             if (sda_in == 1'b1)  // 高电平表示未应答
-                                i2c_ack <= 1'b1;  // 拉高应答标志位    
+                                i2c_ack <= 1'b1;  // 拉高应答标志位
                         end
                         7'd35: begin
                             scl <= 1'b0;
@@ -387,7 +387,7 @@ module i2c_dri #(
                         7'd38: begin  // 从机应答
                             st_done <= 1'b1;
                             if (sda_in == 1'b1)  // 高电平表示未应答
-                                i2c_ack <= 1'b1;  // 拉高应答标志位    
+                                i2c_ack <= 1'b1;  // 拉高应答标志位
                         end
                         7'd39: begin
                             scl <= 1'b0;

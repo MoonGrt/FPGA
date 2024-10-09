@@ -52,7 +52,7 @@ module fifo1 #(
 );
 
     // internal signal
-    localparam Depth = 1 << AW;  // depth of FIFO 
+    localparam Depth = 1 << AW;  // depth of FIFO
     reg  [DW-1:0] ram                        [0:Depth-1];
     reg  [  AW:0] wp;  // point
     reg  [  AW:0] rp;

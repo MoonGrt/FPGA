@@ -15,7 +15,7 @@ module dvi_transmitter_top (
     output       tmds_oen      // TMDS 输出使能
 );
 
-    // wire define    
+    // wire define
     wire       reset;
 
     // 并行数据
@@ -30,7 +30,7 @@ module dvi_transmitter_top (
 
     //*****************************************************
     //**                    main code
-    //***************************************************** 
+    //*****************************************************
     assign tmds_oen  = 1'b1;
     assign clk_10bit = 10'b1111100000;
 
@@ -92,7 +92,7 @@ module dvi_transmitter_top (
         .paralell_clk (pclk),
         .serial_clk_5x(pclk_x5),
         .paralell_data(green_10bit),
-        //     .paralell_data      (10'h146),   
+        //     .paralell_data      (10'h146),
 
         .serial_data_out(tmds_data_serial[1])
     );
@@ -102,7 +102,7 @@ module dvi_transmitter_top (
         .paralell_clk (pclk),
         .serial_clk_5x(pclk_x5),
         .paralell_data(red_10bit),
-        //    .paralell_data      (10'h146),    
+        //    .paralell_data      (10'h146),
 
         .serial_data_out(tmds_data_serial[2])
     );
@@ -116,7 +116,7 @@ module dvi_transmitter_top (
         .serial_data_out(tmds_clk_serial)
     );
 
-    // 转换差分信号  
+    // 转换差分信号
     OBUFDS #(
         .IOSTANDARD("TMDS_33")  // I/O电平标准为TMDS
     ) TMDS0 (

@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module hdmi_rx (
-    input wire clk_10m,    // 10M时钟     
-    input wire clk_200m,   // 200M参考时钟                                  
+    input wire clk_10m,    // 10M时钟
+    input wire clk_200m,   // 200M参考时钟
     input wire tmdsclk_p,  // HDMI输入差分时钟
     input wire tmdsclk_n,  // HDMI输入差分时钟
     input wire blue_p,     // HDMI输入蓝色差分数据
@@ -25,14 +25,14 @@ module hdmi_rx (
 );
 
 
-    // wire define  
+    // wire define
     wire [7:0] red;  // 红色像素数据
     wire [7:0] green;  // 绿色像素数据
     wire [7:0] blue;  // 蓝色像素数据
 
     //*****************************************************
     //**                    main code
-    //*****************************************************  
+    //*****************************************************
 
     assign rgb_data   = {red, green, blue};
     assign hdmi_in_en = 1'b0;
@@ -43,7 +43,7 @@ module hdmi_rx (
         else hdmi_in_hpd <= 1'b1;
     end
 
-    // hdmi解码模块 
+    // hdmi解码模块
     dvi_decoder u_dvi_decoder (
         // input
         .clk_200m (clk_200m),
@@ -56,7 +56,7 @@ module hdmi_rx (
         .green_n  (green_n),    // Green data in
         .red_n    (red_n),      // Red data in
         .exrst_n  (rst_n),      // external reset input, e.g. reset button
-        // output       
+        // output
         .reset    (reset),      // rx reset
         .pclk     (pclk),       // double rate pixel clock
         .pclkx5   (pclkx5),     // 10x pixel as IOCLK
@@ -65,8 +65,8 @@ module hdmi_rx (
         .de       (de),         // data enable
         .red      (red),        // pixel data out
         .green    (green),      // pixel data out
-        .blue     (blue)        // pixel data out 
+        .blue     (blue)        // pixel data out
 
-    );  // pixel data out       
+    );  // pixel data out
 
 endmodule

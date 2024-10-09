@@ -12,8 +12,8 @@ module digital_tube (
     reg        divclk = 0;  // 分频后的时钟
     reg [ 7:0] seg = 0;  // 段码
     reg [ 5:0] an = 6'b111110;  // 位码
-    reg [ 3:0] disp_dat = 0;  // 要显示的数据    
-    reg [ 2:0] disp_bit = 1;  // 要显示的位       
+    reg [ 3:0] disp_dat = 0;  // 要显示的数据
+    reg [ 2:0] disp_bit = 1;  // 要显示的位
     parameter maxcnt = 25000;
 
     wire [3:0] data1;  // 个位

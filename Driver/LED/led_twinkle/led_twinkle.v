@@ -15,13 +15,13 @@ module led_twinkle (
     //**                    main code
     //*****************************************************
 
-    // 对计数器的值进行判断，以输出LED的状态 
+    // 对计数器的值进行判断，以输出LED的状态
     assign led = (cnt < 27'd5000_0000) ? 2'b01 : 2'b10;
     //assign led = (cnt <  27'd5)           ? 2'b01 : 2'b10 ;  // 仅用于仿真
 
     // 转换差分信号
     IBUFDS diff_clock (
-        .I (sys_clk_p),  // 系统差分输入时钟    
+        .I (sys_clk_p),  // 系统差分输入时钟
         .IB(sys_clk_n),  // 系统差分输入时钟
         .O (sys_clk)     // 输出系统时钟
     );

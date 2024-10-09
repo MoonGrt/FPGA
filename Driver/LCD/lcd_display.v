@@ -4,13 +4,13 @@ module lcd_display (
     input             lcd_pclk,    // 时钟
     input             rst_n,       // 复位，低电平有效
     input      [10:0] pixel_xpos,  // 当前像素点横坐标
-    input      [10:0] pixel_ypos,  // 当前像素点纵坐标  
+    input      [10:0] pixel_ypos,  // 当前像素点纵坐标
     input      [10:0] h_disp,      // LCD屏水平分辨率
-    input      [10:0] v_disp,      // LCD屏垂直分辨率       
+    input      [10:0] v_disp,      // LCD屏垂直分辨率
     output reg [23:0] pixel_data   // 像素数据
 );
 
-    // parameter define  
+    // parameter define
     parameter WHITE = 24'hFFFFFF;  // 白色
     parameter BLACK = 24'h000000;  // 黑色
     parameter RED = 24'hFF0000;  // 红色
