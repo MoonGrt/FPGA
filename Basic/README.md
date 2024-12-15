@@ -11,20 +11,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <a href="https://github.com/MoonGrt/FPGA-Basic">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <a href="https://github.com/MoonGrt/FPGA">
+    <img src="../Document/images/logo.png" alt="Logo" width="80" height="80">
     </a>
-<h3 align="center">FPGA-Basic</h3>
+<h3 align="center">FPGA</h3>
     <p align="center">
-    FPGA-Basic is a repository designed to store fundamental FPGA modules for easy reuse in future projects. The collection includes a variety of drivers, algorithms, memory components, and utility modules, aimed at providing a solid foundation for FPGA development.
+    FPGA is a repository designed to store fundamental FPGA modules for easy reuse in future projects. The collection includes a variety of drivers, algorithms, memory components, and utility modules, aimed at providing a solid foundation for FPGA development.
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Basic"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MoonGrt/FPGA"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Basic">View Demo</a>
+    <a href="https://github.com/MoonGrt/FPGA">View Demo</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Basic/issues">Report Bug</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Basic/issues">Request Feature</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Request Feature</a>
     </p>
 </div>
 
@@ -137,7 +137,7 @@
 ## About The Project
 
 <p>
-FPGA-Basic is a repository designed to store and organize fundamental modules for FPGA development. It provides a modular approach to FPGA design, making it easier to integrate and reuse different hardware components across various projects. This repository is particularly useful for both beginners and experienced engineers who need ready-to-use modules in areas such as signal processing, interface drivers, memory management, and general utility functions. Each module has been optimized for performance and is thoroughly documented for ease of understanding and integration.
+FPGA is a repository designed to store and organize fundamental modules for FPGA development. It provides a modular approach to FPGA design, making it easier to integrate and reuse different hardware components across various projects. This repository is particularly useful for both beginners and experienced engineers who need ready-to-use modules in areas such as signal processing, interface drivers, memory management, and general utility functions. Each module has been optimized for performance and is thoroughly documented for ease of understanding and integration.
 </p>
 
 <h4>Structure Overview</h4>
@@ -214,7 +214,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 MoonGrt - 1561145394@qq.com
-Project Link: [MoonGrt/FPGA-Basic](https://github.com/MoonGrt/FPGA-Basic)
+Project Link: [MoonGrt/FPGA](https://github.com/MoonGrt/FPGA)
 
 <p align="right">(<a href="#top">top</a>)</p>
 
@@ -238,14 +238,14 @@ Project Link: [MoonGrt/FPGA-Basic](https://github.com/MoonGrt/FPGA-Basic)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[contributors-url]: https://github.com/MoonGrt/FPGA-Basic/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[forks-url]: https://github.com/MoonGrt/FPGA-Basic/network/members
-[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[stars-url]: https://github.com/MoonGrt/FPGA-Basic/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[issues-url]: https://github.com/MoonGrt/FPGA-Basic/issues
-[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[license-url]: https://github.com/MoonGrt/FPGA-Basic/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA.svg?style=for-the-badge
+[contributors-url]: https://github.com/MoonGrt/FPGA/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA.svg?style=for-the-badge
+[forks-url]: https://github.com/MoonGrt/FPGA/network/members
+[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA.svg?style=for-the-badge
+[stars-url]: https://github.com/MoonGrt/FPGA/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA.svg?style=for-the-badge
+[issues-url]: https://github.com/MoonGrt/FPGA/issues
+[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA.svg?style=for-the-badge
+[license-url]: https://github.com/MoonGrt/FPGA/blob/master/LICENSE
 

@@ -11,20 +11,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <a href="https://github.com/MoonGrt/FPGA-Basic">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <a href="https://github.com/MoonGrt/FPGA">
+    <img src="../Document/images/logo.png" alt="Logo" width="80" height="80">
     </a>
-<h3 align="center">FPGA-Basic</h3>
+<h3 align="center">FPGA</h3>
     <p align="center">
-    FPGA-Basic仓库用于存储一些基础的FPGA模块，方便在未来项目中调用。该集合包含多种驱动程序、算法、内存组件和实用模块，旨在为FPGA开发提供一个坚实的基础。
+    FPGA仓库用于存储一些基础的FPGA模块，方便在未来项目中调用。该集合包含多种驱动程序、算法、内存组件和实用模块，旨在为FPGA开发提供一个坚实的基础。
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Basic"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MoonGrt/FPGA"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Basic">View Demo</a>
+    <a href="https://github.com/MoonGrt/FPGA">View Demo</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Basic/issues">Report Bug</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Basic/issues">Request Feature</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Request Feature</a>
     </p>
 </div>
 
@@ -137,7 +137,7 @@
 ## 关于本项目
 
 <p>
-FPGA-Basic仓库旨在存储和组织FPGA开发中常用的基础模块，提供一种模块化的设计方法，方便在不同项目中集成和复用各类硬件组件。该仓库非常适合需要现成模块的初学者和有经验的工程师，涵盖信号处理、接口驱动、内存管理及通用实用功能等领域。每个模块都经过性能优化，并附有详细的文档说明，便于理解和集成。
+FPGA仓库旨在存储和组织FPGA开发中常用的基础模块，提供一种模块化的设计方法，方便在不同项目中集成和复用各类硬件组件。该仓库非常适合需要现成模块的初学者和有经验的工程师，涵盖信号处理、接口驱动、内存管理及通用实用功能等领域。每个模块都经过性能优化，并附有详细的文档说明，便于理解和集成。
 </p>
 
 <h4>结构概览</h4>
@@ -216,7 +216,7 @@ FPGA-Basic仓库旨在存储和组织FPGA开发中常用的基础模块，提供
 ## 联系我们
 
 MoonGrt - 1561145394@qq.com
-Project Link: [MoonGrt/FPGA-Basic](https://github.com/MoonGrt/FPGA-Basic)
+Project Link: [MoonGrt/FPGA](https://github.com/MoonGrt/FPGA)
 
 <p align="right">(<a href="#top">top</a>)</p>
 
@@ -242,14 +242,14 @@ Project Link: [MoonGrt/FPGA-Basic](https://github.com/MoonGrt/FPGA-Basic)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[contributors-url]: https://github.com/MoonGrt/FPGA-Basic/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[forks-url]: https://github.com/MoonGrt/FPGA-Basic/network/members
-[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[stars-url]: https://github.com/MoonGrt/FPGA-Basic/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[issues-url]: https://github.com/MoonGrt/FPGA-Basic/issues
-[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-Basic.svg?style=for-the-badge
-[license-url]: https://github.com/MoonGrt/FPGA-Basic/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA.svg?style=for-the-badge
+[contributors-url]: https://github.com/MoonGrt/FPGA/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA.svg?style=for-the-badge
+[forks-url]: https://github.com/MoonGrt/FPGA/network/members
+[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA.svg?style=for-the-badge
+[stars-url]: https://github.com/MoonGrt/FPGA/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA.svg?style=for-the-badge
+[issues-url]: https://github.com/MoonGrt/FPGA/issues
+[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA.svg?style=for-the-badge
+[license-url]: https://github.com/MoonGrt/FPGA/blob/master/LICENSE
 

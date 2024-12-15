@@ -11,20 +11,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <a href="https://github.com/MoonGrt/FPGA">
+    <img src="../Document/images/logo.png" alt="Logo" width="80" height="80">
     </a>
-<h3 align="center">FPGA-Comm_Interface</h3>
+<h3 align="center">FPGA</h3>
     <p align="center">
-    FPGA-Comm_Interface仓库收录了常用的FPGA通信模块，便于日后开发和集成。每个模块都包含相应的测试平台文件（testbench），确保代码功能完整和可靠。
+    FPGA仓库收录了常用的FPGA通信模块，便于日后开发和集成。每个模块都包含相应的测试平台文件（testbench），确保代码功能完整和可靠。
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MoonGrt/FPGA"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface">View Demo</a>
+    <a href="https://github.com/MoonGrt/FPGA">View Demo</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Report Bug</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Request Feature</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Request Feature</a>
     </p>
 </div>
 
@@ -103,7 +103,7 @@
 ## 关于本项目
 
 <p>
-  FPGA-Comm_Interface仓库是一个专为FPGA开发者设计的综合性通信模块库，旨在提供便捷的FPGA通信解决方案。该仓库汇集了多种常用的通信接口模块，方便开发者在不同的项目中快速集成。每个模块均配有相应的测试平台文件（testbench），帮助用户验证功能和性能，确保系统的稳定性与可靠性。
+  FPGA仓库是一个专为FPGA开发者设计的综合性通信模块库，旨在提供便捷的FPGA通信解决方案。该仓库汇集了多种常用的通信接口模块，方便开发者在不同的项目中快速集成。每个模块均配有相应的测试平台文件（testbench），帮助用户验证功能和性能，确保系统的稳定性与可靠性。
 </p>
 
 <h3>描述</h3>
@@ -161,7 +161,7 @@
 ## 联系我们
 
 MoonGrt - 1561145394@qq.com
-Project Link: [MoonGrt/FPGA-Comm_Interface](https://github.com/MoonGrt/FPGA-Comm_Interface)
+Project Link: [MoonGrt/FPGA](https://github.com/MoonGrt/FPGA)
 
 <p align="right">(<a href="#top">top</a>)</p>
 
@@ -187,14 +187,14 @@ Project Link: [MoonGrt/FPGA-Comm_Interface](https://github.com/MoonGrt/FPGA-Comm
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[contributors-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[forks-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/network/members
-[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[stars-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[issues-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/issues
-[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[license-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA.svg?style=for-the-badge
+[contributors-url]: https://github.com/MoonGrt/FPGA/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA.svg?style=for-the-badge
+[forks-url]: https://github.com/MoonGrt/FPGA/network/members
+[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA.svg?style=for-the-badge
+[stars-url]: https://github.com/MoonGrt/FPGA/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA.svg?style=for-the-badge
+[issues-url]: https://github.com/MoonGrt/FPGA/issues
+[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA.svg?style=for-the-badge
+[license-url]: https://github.com/MoonGrt/FPGA/blob/master/LICENSE
 

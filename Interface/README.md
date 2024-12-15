@@ -11,20 +11,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <a href="https://github.com/MoonGrt/FPGA">
+    <img src="../Document/images/logo.png" alt="Logo" width="80" height="80">
     </a>
-<h3 align="center">FPGA-Comm_Interface</h3>
+<h3 align="center">FPGA</h3>
     <p align="center">
-    The FPGA-Comm_Interface repository contains commonly used FPGA communication modules for future development and integration. Each module is equipped with corresponding testbench files to ensure completeness and reliability.
+    The FPGA repository contains commonly used FPGA communication modules for future development and integration. Each module is equipped with corresponding testbench files to ensure completeness and reliability.
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MoonGrt/FPGA"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface">View Demo</a>
+    <a href="https://github.com/MoonGrt/FPGA">View Demo</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Report Bug</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Request Feature</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Request Feature</a>
     </p>
 </div>
 
@@ -103,7 +103,7 @@
 ## About The Project
 
 <p>
-  The FPGA-Comm_Interface repository is a comprehensive library of communication modules specifically designed for FPGA developers, aimed at providing convenient FPGA communication solutions. This repository aggregates a variety of commonly used communication interface modules, allowing developers to quickly integrate them into different projects. Each module is equipped with corresponding testbench files, assisting users in verifying functionality and performance, ensuring system stability and reliability.
+  The FPGA repository is a comprehensive library of communication modules specifically designed for FPGA developers, aimed at providing convenient FPGA communication solutions. This repository aggregates a variety of commonly used communication interface modules, allowing developers to quickly integrate them into different projects. Each module is equipped with corresponding testbench files, assisting users in verifying functionality and performance, ensuring system stability and reliability.
 </p>
 
 <h3>Description</h3>
@@ -183,14 +183,14 @@ Project Link: [MoonGrt/](https://github.com/MoonGrt/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[contributors-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[forks-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/network/members
-[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[stars-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[issues-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/issues
-[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
-[license-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA.svg?style=for-the-badge
+[contributors-url]: https://github.com/MoonGrt/FPGA/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA.svg?style=for-the-badge
+[forks-url]: https://github.com/MoonGrt/FPGA/network/members
+[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA.svg?style=for-the-badge
+[stars-url]: https://github.com/MoonGrt/FPGA/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA.svg?style=for-the-badge
+[issues-url]: https://github.com/MoonGrt/FPGA/issues
+[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA.svg?style=for-the-badge
+[license-url]: https://github.com/MoonGrt/FPGA/blob/master/LICENSE
 

@@ -11,20 +11,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <a href="https://github.com/MoonGrt/FPGA-Image_Process">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <a href="https://github.com/MoonGrt/FPGA">
+    <img src="../Document/images/logo.png" alt="Logo" width="80" height="80">
     </a>
-<h3 align="center">FPGA-Image_Process</h3>
+<h3 align="center">FPGA</h3>
     <p align="center">
     该仓库包含了一些用于FPGA的图像处理模块，方便未来的使用与扩展。所有模块均包含相应的testbench文件，帮助用户进行功能验证。
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Image_Process"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MoonGrt/FPGA"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/MoonGrt/FPGA-Image_Process">View Demo</a>
+    <a href="https://github.com/MoonGrt/FPGA">View Demo</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Image_Process/issues">Report Bug</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MoonGrt/FPGA-Image_Process/issues">Request Feature</a>
+    <a href="https://github.com/MoonGrt/FPGA/issues">Request Feature</a>
     </p>
 </div>
 
@@ -171,7 +171,7 @@
 ## 联系我们
 
 MoonGrt - 1561145394@qq.com
-Project Link: [MoonGrt/FPGA-Image_Process](https://github.com/MoonGrt/FPGA-Image_Process)
+Project Link: [MoonGrt/FPGA](https://github.com/MoonGrt/FPGA)
 
 <p align="right">(<a href="#top">top</a>)</p>
 
@@ -197,14 +197,14 @@ Project Link: [MoonGrt/FPGA-Image_Process](https://github.com/MoonGrt/FPGA-Image
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
-[contributors-url]: https://github.com/MoonGrt/FPGA-Image_Process/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
-[forks-url]: https://github.com/MoonGrt/FPGA-Image_Process/network/members
-[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
-[stars-url]: https://github.com/MoonGrt/FPGA-Image_Process/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
-[issues-url]: https://github.com/MoonGrt/FPGA-Image_Process/issues
-[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-Image_Process.svg?style=for-the-badge
-[license-url]: https://github.com/MoonGrt/FPGA-Image_Process/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA.svg?style=for-the-badge
+[contributors-url]: https://github.com/MoonGrt/FPGA/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA.svg?style=for-the-badge
+[forks-url]: https://github.com/MoonGrt/FPGA/network/members
+[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA.svg?style=for-the-badge
+[stars-url]: https://github.com/MoonGrt/FPGA/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA.svg?style=for-the-badge
+[issues-url]: https://github.com/MoonGrt/FPGA/issues
+[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA.svg?style=for-the-badge
+[license-url]: https://github.com/MoonGrt/FPGA/blob/master/LICENSE
 
