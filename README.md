@@ -16,7 +16,7 @@
     </a>
 <h3 align="center">FPGA</h3>
     <p align="center">
-    FPGA is a repository designed to store fundamental FPGA modules for easy reuse in future projects. The collection includes a variety of drivers, algorithms, memory components, and utility modules, aimed at providing a solid foundation for FPGA development.
+    FPGA is a repository designed to store FPGA modules for easy reuse in future projects.
     <br />
     <a href="https://github.com/MoonGrt/FPGA"><strong>Explore the docs »</strong></a>
     <br />
@@ -72,8 +72,13 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<p style="-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p></body></html>
+<h4>FPGA Module Repository</h4>
+<p>This repository contains my FPGA Module designs:</p>
+<ul>
+  <li><a href="https://github.com/MoonGrt/FPGA/tree/master/Basic">Basic</a></li>
+  <li><a href="https://github.com/MoonGrt/FPGA/tree/master/Image_Process">Image_Process</a></li>
+  <li><a href="https://github.com/MoonGrt/FPGA/tree/master/Comm_Interface">Comm_Interface</a></li>
+</ul>
 <p align="right">(<a href="#top">top</a>)</p>
 
 

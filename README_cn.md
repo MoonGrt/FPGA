@@ -16,7 +16,7 @@
     </a>
 <h3 align="center">FPGA</h3>
     <p align="center">
-    FPGA仓库用于存储一些基础的FPGA模块，方便在未来项目中调用。该集合包含多种驱动程序、算法、内存组件和实用模块，旨在为FPGA开发提供一个坚实的基础。
+    FPGA仓库用于存储一些的FPGA模块，方便在未来项目中调用。
     <br />
     <a href="https://github.com/MoonGrt/FPGA"><strong>浏览文档 »</strong></a>
     <br />
@@ -70,10 +70,15 @@
 
 
 
-<!-- 关于本项目 -->
-## 关于本项目
-
-<p style="-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p></body></html>
+<!-- ABOUT THE PROJECT -->
+## About The Project
+<h4>FPGA Module Repository</h4>
+<p>This repository contains my FPGA Module designs:</p>
+<ul>
+  <li><a href="https://github.com/MoonGrt/FPGA/tree/master/Basic">Basic</a></li>
+  <li><a href="https://github.com/MoonGrt/FPGA/tree/master/Image_Process">Image_Process</a></li>
+  <li><a href="https://github.com/MoonGrt/FPGA/tree/master/Comm_Interface">Comm_Interface</a></li>
+</ul>
 <p align="right">(<a href="#top">top</a>)</p>
 
 
